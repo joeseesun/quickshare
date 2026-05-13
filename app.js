@@ -302,7 +302,7 @@ app.get('/', requireAdmin, (req, res) => {
   const sessionToken = req.adminSession?.token || req.cookies?.[ADMIN_COOKIE] || '';
 
   return res.render('index', {
-    title: 'HTML-Go | 分享 HTML 代码的简单方式',
+    title: 'QuickShare | 粘贴代码，一键分享',
     page: 'home-page',
     csrfToken: config.authEnabled ? createCsrfToken(sessionToken) : ''
   });

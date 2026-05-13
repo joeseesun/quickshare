@@ -2,49 +2,38 @@
 
 <div class="main-container">
   <header class="app-header">
-    <div class="title-container">
-      <h1 class="cyber-title"><span>H</span><span>T</span><span>M</span><span>L</span><span>-</span><span>G</span><span>O</span></h1>
-    </div>
-    <p class="app-description">分享AI生成内容的最佳方式</p>
+    <h1 class="app-title">QuickShare</h1>
+    <p class="app-description">粘贴代码，一键分享</p>
   </header>
 
   <div class="content-area">
-    <!-- 代码输入卡片 -->
     <div class="card input-card">
-      <!-- HTML 输入区域 -->
       <div class="input-section">
-        <!-- 移除了标签切换，默认只显示粘贴框 -->
-        
-        <!-- 加载指示器 -->
         <div id="loading-indicator" class="loading-indicator">
           <div class="spinner"></div>
           <span>处理中...</span>
         </div>
-        
-        <!-- 代码输入 -->
+
         <div id="code-input-container" role="tabpanel">
-          <!-- 代码类型指示器 -->
           <div id="code-type-indicator" class="code-type-indicator html-type">
             <i class="fas fa-code"></i>
             <span id="code-type-text">HTML</span>
           </div>
-          <textarea id="html-input" class="cyber-input" placeholder="在这里粘贴你的 HTML/Markdown/SVG/Mermaid 代码..." aria-label="HTML 代码输入区域"></textarea>
+          <textarea id="html-input" class="cyber-input" placeholder="在这里粘贴你的 HTML / Markdown / SVG / Mermaid 代码..." aria-label="代码输入区域"></textarea>
         </div>
-        
-        <!-- 隐藏文件上传区域，但保留文件上传功能 -->
-        <div style="display: none;">
+
+        <div class="hidden">
           <input id="html-file" type="file" class="hidden" accept=".html,.htm" aria-label="上传 HTML 文件" />
-          <p id="file-name" class="mt-3" style="color: var(--primary);"></p>
+          <p id="file-name" class="file-name-text"></p>
         </div>
-        
-        <!-- 按钮 -->
-        <div class="mt-4 flex justify-between" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+
+        <div class="button-row">
           <div>
             <label for="html-file" class="cyber-btn cyber-btn-secondary tooltip micro-interaction" data-tooltip="上传HTML文件" aria-label="上传HTML文件">
               <i class="fas fa-file-upload mr-1" aria-hidden="true"></i>上传文件
             </label>
           </div>
-          <div style="display: flex; gap: 12px;">
+          <div class="button-group">
             <button id="clear-button" class="cyber-btn cyber-btn-secondary tooltip micro-interaction" data-tooltip="清空内容" aria-label="清空内容">
               <i class="fas fa-eraser mr-1" aria-hidden="true"></i>清除
             </button>
@@ -55,10 +44,9 @@
         </div>
       </div>
     </div>
-    
-    <!-- 结果区域卡片 -->
-    <div id="result-section" class="card result-card" style="display: none;" aria-live="polite">
-      <h3 class="section-title" style="color: var(--primary); font-family: 'Orbitron', sans-serif; margin-bottom: 1rem;">链接已生成</h3>
+
+    <div id="result-section" class="card result-card hidden" aria-live="polite">
+      <h3 class="section-title">链接已生成</h3>
       <div class="result-container">
         <div id="result-url" class="result-url" tabindex="0"></div>
         <div class="action-buttons">
@@ -70,27 +58,24 @@
           </button>
         </div>
       </div>
-      
-      <!-- 密码保护开关 -->
+
       <div class="password-protection-toggle">
         <div class="protection-controls">
           <div class="switch-container">
             <input type="checkbox" id="password-toggle" class="switch-checkbox">
             <label for="password-toggle" class="switch-label"></label>
           </div>
-          <div id="password-info" class="password-info" style="display: none; margin-left: 15px;">
-            <span id="generated-password" class="generated-password" style="display: inline-block; cursor: pointer;" title="点击复制密码"></span>
-            <a href="#" id="copy-password-link" class="copy-password-link" style="display: inline-block; margin-left: 10px;">复制密码和网址</a>
+          <div id="password-info" class="password-info hidden">
+            <span id="generated-password" class="generated-password" title="点击复制密码"></span>
+            <a href="#" id="copy-password-link" class="copy-password-link hidden">复制密码和网址</a>
           </div>
         </div>
       </div>
-      
-
     </div>
   </div>
-  
+
   <footer class="app-footer">
-    <p class="footer-text">@2025 <a href="https://x.com/vista8" target="_blank" rel="noopener noreferrer">向阳乔木</a></p>
+    <p class="footer-text">&copy;2026 <a href="https://x.com/vista8" target="_blank" rel="noopener noreferrer">Namoo</a></p>
   </footer>
 </div>
 
